@@ -1,0 +1,87 @@
+:root {
+	--font-primary: 'Outfit', sans-serif;
+	--font-size-primary: 0.9375rem;
+	--font-size-component-heading: 1.34375rem;
+
+	--white: hsl(0, 0%, 100%);
+	--light-gray: hsl(212, 45%, 89%);
+	--grayish-blue: hsl(220, 15%, 55%);
+	--dark-blue: hsl(218, 44%, 22%);
+
+	--color-body-background: var(--light-gray);
+	--color-component-background: var(--white);
+	--color-component-heading: var(--dark-blue);
+	--color-component-paragraph: var(--grayish-blue);
+}
+
+*, *::before, *::after {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	background-color: var(--color-body-background);
+    min-height: 100vh;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+	font-family: var(--font-primary);
+	font-size: var(--font-size-primary);
+}
+
+/* QR Code Component */
+
+.qr-code-component {
+	background-color: var(--color-component-background);
+	border-radius: 1.125rem;
+	max-width: 19.5063rem;
+	padding: 1rem;
+	padding-block-end: 2.25rem;
+	text-align: center;
+	box-shadow: 0 1.375rem 1.875rem rgba(0, 0, 0, 0.055);
+}
+
+.qr-code-component__image-container {
+	border-radius: 0.5rem;
+	margin-block-end: 1.375rem;
+	overflow: hidden;
+}
+
+.qr-code-component__text-container {
+	padding-inline: 0.5rem;
+}
+
+.qr-code-component__heading {
+	color: var(--color-component-heading);
+	margin-block-end: 0.875rem;
+	font-size: var(--font-size-component-heading);
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.qr-code-component__paragraph {
+	color: var(--color-component-paragraph);
+	font-weight: 400;
+	line-height: 1.25;
+}
+
+/* Attribution / Link */
+
+.attribution {
+	margin-block-start: 0.656rem;
+	font-size: 0.6875rem;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
